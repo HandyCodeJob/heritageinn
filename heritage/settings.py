@@ -29,7 +29,7 @@ else:
     SECRET_KEY = ''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
 
 #DEFAULT_FILE_STORAGE = 'django_boto.s3.storage.S3Storage'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = os.environ.get('AKIAJNCHKABYCFOYHSHQ')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_S3_CALLING_FORMAT = 'boto.s3.connection.OrdinaryCallingFormat'
 AWS_S3_SECURE_URLS = False
