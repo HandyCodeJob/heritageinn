@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 urlpatterns = (
     url(r'^/?$', 'website.views.home', name='home'),
     url(r'^geothermal/?$',
-        TemplateView.as_view(template_name='geothermal.html'),
+        TemplateView.as_view(template_name='website/geothermal.html'),
         name='geothermal'
     ),
 )
