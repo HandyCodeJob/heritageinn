@@ -5251,7 +5251,8 @@ button.close {
 
 .carousel {
   position: relative;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin-top: 50px; }
 
 .carousel-inner {
   position: relative;
