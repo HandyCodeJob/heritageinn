@@ -10,23 +10,32 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(6cv&bcz_a7$y8ta!yx^f%!79$o#m)$owv_%w0md^%s4soiu=%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    SECRET_KEY = '(6cv&bcz_a7$y8ta!yx^f%!79$o#m)$owv_%w0md^%s4soiu=%'
+elif os.environ.get('SECRET_KEY'):
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+else:
+    import random
+    SECRET_KEY = ''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
 
+#DEFAULT_FILE_STORAGE = 'django_boto.s3.storage.S3Storage'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CALLING_FORMAT = 'boto.s3.connection.OrdinaryCallingFormat'
+AWS_S3_SECURE_URLS = False
+BOTO_S3_BUCKET = os.environ.get('BOTO_S3_BUCKET')
+
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -98,8 +107,17 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# https://docs.djangoproject.com/en/1.8/howto/static-files
 
-STATIC_URL = '/static/'
+#STATICFILES_STORAGE = 'django_boto.s3.storage.S3Storage'
+#STATIC_URL = 'https://static.idheritageinn.com.s3.amazonaws.com/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+    'Expires': 'Thu, 31 Dec 2069 20:00:00 GMT',
+    'Cache-Control': 'max-age=94608000',
+}
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
