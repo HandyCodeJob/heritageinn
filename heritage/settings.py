@@ -111,7 +111,7 @@ USE_TZ = True
 
 #STATICFILES_STORAGE = 'django_boto.s3.storage.S3Storage'
 #STATIC_URL = 'https://static.idheritageinn.com.s3.amazonaws.com/static/'
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
