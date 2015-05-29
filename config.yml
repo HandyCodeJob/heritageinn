@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+      environment: heritageinn-env
 global:
   application_name: heritageinn
   default_ec2_keyname: aws-eb
