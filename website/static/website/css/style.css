@@ -12,6 +12,10 @@
     }
 }
 
+.img-center {
+    margin: auto;
+}
+
 #portfolio .img-thumbnail{
   border:250px;
   border-radius:4px; /* slight round in images in gallery */
