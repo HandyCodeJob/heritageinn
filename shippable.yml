@@ -26,9 +26,9 @@ before_script:
 script:
   - mkdir -p .elasticbeanstalk
   - cp config.yml .elasticbeanstalk/
-#  - python manage.py migrate
-#  - python manage.py --noinput collectstatic
-#  - python manage.py createsuperuser --username="fsmimp" --email="admin@example.com" --password="password"
+  - python manage.py migrate
+  - python manage.py --noinput collectstatic
+  - python manage.py createsuperuser --username="fsmimp" --email="admin@example.com" --password="password"
 
 after_success :
   - eb init && eb deploy
