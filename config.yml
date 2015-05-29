@@ -1,10 +1,10 @@
 branch-defaults:
   master:
-      environment: heritageinn-env
+      environment: heritageinn-env-no-dock
 global:
   application_name: heritageinn
   default_ec2_keyname: aws-eb
-  default_platform: Python 3.4 (Preconfigured - Docker)
+  default_platform: Python 3.4
   default_region: us-west-2
   profile: eb-cli
   sc: git
