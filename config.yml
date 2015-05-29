@@ -10,5 +10,5 @@ global:
   sc: git
 container_commands:
   01_migrate:
-    command: "django-admin.py migrate"
+    command: "python manage.py migrate"
     leader_only: true
