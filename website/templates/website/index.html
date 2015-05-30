@@ -13,7 +13,7 @@
                 <h1 class="">
 			    	Rooms
 			    </h1>
-            <div class="row portfolio">
+            <div class="row equal portfolio">
                 {% for room in rooms %}
                 <div class="col-md-4 {{room.slug}}">
                     <div class="panel panel-default">
@@ -32,7 +32,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="clear"></div>
+                {% if forloop.counter == 3 %}
+                </div>
+                <div class="row equal portfolio">
+                {% endif %}
                 {% endfor %}
             </div>
             <!--</div id="rooms">-->
