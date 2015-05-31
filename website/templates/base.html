@@ -50,10 +50,6 @@
   <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">-->
   <!-- <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">-->
   <!-- <link rel="shortcut icon" href="{%static 'website/img/favicon.png' %}">-->
-
-  <script type="text/javascript" src="{% static 'website/js/jquery.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'website/js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'website/js/scripts.js' %}"></script>
 </head>
 
 <body>
@@ -135,11 +131,26 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a class="" href="https://secure.rezovation.com/Reservations/CheckAvailability.aspx?_0QFGJVN6HWUIUU">Book Now</a>
+                        <li class="">
+                            <a class="" href="https://secure.rezovation.com/Reservations/CheckAvailability.aspx?_0QFGJVN6HWUIUU"><strong>Book Now</strong></a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#welcome">Welcome</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#rooms">Rooms</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#breakfast">Breakfast</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#bike">Bikes</a>
                         </li>
                         <li>
                             <a class="" href="{% url 'geothermal' %}">Geothermal</a>
+                        </li>
+                        <li>
+                            <a class="" href="index.html#history">History</a>
                         </li>
                     </ul>
                 </div>
@@ -193,4 +204,7 @@
 </script>
 <!-- end google analytics -->
 </body>
+  <script type="text/javascript" src="{% static 'website/js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'website/js/scripts.js' %}"></script>
 </html>

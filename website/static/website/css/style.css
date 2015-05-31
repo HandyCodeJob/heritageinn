@@ -13,12 +13,25 @@
   padding:0px;
 }
 
+.carousel-inner .item img {
+    width: 100%;
+}
+
 @media (min-width: 1200px) {
 .equal, .equal > div[class*='col-'] {
     display: -webkit-flex;
     display: flex;
     flex:1 1 auto;
 }
+}
+
+.book-now {
+    position: absolute;
+    bottom: 30px;
+}
+
+.room-desc {
+    padding-bottom: 50px;
 }
 
 html {

@@ -22,10 +22,10 @@
                     All rooms at the Inn have been comfortably and charmingly provided with private baths, flat-screen TV with cable channels, period furniture, and cozy comforters.  Spacious main floor common rooms include a large entry hall, formal dining room, living room, featuring diamond-paned French doors, oak flooring, oriental carpets and plentiful, comfortable seating. On-premise a computer  is available for printing boarding passes, checking e-mail and other business or personal needs. A fax is also available  and the house has a secure wireless network.
                 </p>
             </div >
-            <!-- <div id="rooms" class="jumbotron row"> -->
-                <h1 class="">
-			    	Rooms
-			    </h1>
+            <!-- <div id="rooms"> -->
+            <h1 id="rooms" class="">
+			    Rooms
+			</h1>
             <div class="row equal portfolio">
                 {% for room in rooms %}
                 <div class="col-md-4 {{room.slug}}">
@@ -85,7 +85,7 @@
             </div>
             <div id="bike" class="jumbotron row">
                 <h1 class="">
-					Complementary Bycicles
+                    Complimentary Bicycles
 				</h1>
                 <img class="img-responsive col-md-4 img-center" src="{% static 'website/img/bike.jpg' %}">
                 <p class="">
