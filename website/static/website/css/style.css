@@ -40,7 +40,7 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin-top: 50; }
 
 article,
 aside,
@@ -5267,7 +5267,7 @@ button.close {
 .carousel {
   position: relative;
   margin-bottom: 30px;
-  margin-top: 50px; }
+}
 
 .carousel-inner {
   position: relative;
